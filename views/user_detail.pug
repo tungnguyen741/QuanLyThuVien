@@ -1,0 +1,17 @@
+extends ../layout/common.pug
+block content
+ div(class="container mt-5") 
+  h1 Info User
+  
+  ul
+    each x in dataFinded
+     img.avatar(src= x.avatarUrl)
+     li Tên:
+      span.ml-1= x.name
+     li Tuổi:
+      span.ml-1= x.age
+     li Giới Tính:
+      span.ml-1= x.sex
+ 
+  div
+    a(href="/users") Go back
